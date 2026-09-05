@@ -521,7 +521,7 @@ function VerdictChip({ v }: { v: Verdict }) {
   return (
     <span
       className={cn(
-        "inline-block rounded-xs px-1.5 py-0.5 font-mono text-[10px] font-medium tracking-wide",
+        "inline-block rounded-xs px-1.5 py-0.5 font-mono text-[10px] font-medium tracking-wide whitespace-nowrap",
         v === "TAP" && "bg-up/15 text-tap",
         v === "WATCH" && "bg-watch/15 text-watch",
         v === "SKIP" && "bg-down/15 text-skip",

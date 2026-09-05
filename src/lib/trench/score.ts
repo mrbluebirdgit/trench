@@ -63,6 +63,7 @@ export function scoreToken(
   }
   if (vol5 >= 4000 && tx > 0 && tx < 8) rejects.push("wash tape");
   if (ageMin > 20 && mc < 4000 && vol5 < 50) rejects.push("dead dust");
+  if (t.phase !== "migrated" && ageMin > 12 * 60) rejects.push("stale unmigrated");
   if (buys > 6 && sells === 0 && ageMin > 3 && vol5 > 200) rejects.push("unsellable tape");
   if (t.complete && liq > 0 && liq < 8000) rejects.push("thin graduated liq");
   if (t.venueStage === "unknown") rejects.push("stage unknown");
